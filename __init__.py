@@ -12,7 +12,7 @@ import os
 
 db_name = 'bjos'
 table_name = 'forecast'
-host='167.99.178.209'
+host='/tmp/'
 
 df = predict.predict()
 print(df.columns)
