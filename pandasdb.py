@@ -11,6 +11,16 @@ class pandasdb():
     def __init__(self, database, table):
         self.database = database
         self.table = table
+    
+#    def create_table(self):
+#        connection = psycopg2.connect(host="localhost", database="bjos", user="bjos", password="3iRM7Ihr@")
+#        cur = conn.cursor()
+#        cur.execute(f'''CREATE TABLE {self.table}
+#            (ID INT PRIMARY KEY     NOT NULL,
+#            Date/Time TEXT          NOT NULL,
+#            Temp
+#            )
+#        ''')
         
     def pd_to_db(self, dtypes, df, if_exists):
         if len(dtypes) != len(df.columns):

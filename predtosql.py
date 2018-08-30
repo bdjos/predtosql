@@ -18,5 +18,5 @@ print(df.columns)
 df_dtypes = ['int', 'int', 'int', 'int', 'int', 'int', 'int', 'int', 'float']
 
 db = pandasdb.pandasdb(db_name, table_name)
-db.pd_to_db(df_dtypes, df, if_exists='append')
+db.pd_to_db(df_dtypes, df, if_exists='replace')
 
