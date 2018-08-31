@@ -16,7 +16,7 @@ table_name = 'forecast'
 
 df = predict.predict()
 print(df.columns)
-df_dtypes = [Column(Datetime, primary_key=True), 
+df_dtypes = [Column(DateTime, primary_key=True), 
              Column(Integer),
              Column(Integer), 
              Column(Integer), 
