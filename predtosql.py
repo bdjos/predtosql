@@ -16,15 +16,15 @@ table_name = 'forecast'
 
 df = predict.predict()
 print(df.columns)
-df_dtypes = [Column(DateTime, primary_key=True), 
-             Column(Integer),
-             Column(Integer), 
-             Column(Integer), 
-             Column(Integer), 
-             Column(Integer), 
-             Column(Integer), 
-             Column(Integer), 
-             Column(Float)]
+df_dtypes = [DateTime(), 
+             Integer(),
+             Integer(), 
+             Integer(), 
+             Integer(), 
+             Integer(), 
+             Integer(), 
+             Integer(), 
+             Float())]
 
 db = pandasdb.pandasdb(db_name, table_name)
 db.pd_to_db(df_dtypes, df, if_exists='replace')

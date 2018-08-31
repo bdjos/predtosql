@@ -32,6 +32,7 @@ class pandasdb():
             print('len of dtypes must equal number of columns')
         else:
             dtypes_dict = dict(zip(list(df.columns), dtypes))
+            print(dtypes_dict)
         
             df.to_sql(name = self.table, con = self.engine, if_exists = if_exists, dtype = dtypes_dict)
 
