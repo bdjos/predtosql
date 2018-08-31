@@ -9,7 +9,7 @@ import pandasdb
 import accuweathertest
 import predict
 import os
-from sqlalchemy import Column, Integer, String, Float, Datetime
+from sqlalchemy import Column, Integer, String, Float, DateTime
 
 db_name = 'bjos'
 table_name = 'forecast'

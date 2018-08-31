@@ -6,7 +6,7 @@ Created on Fri Aug 31 08:41:03 2018
 """
 
 from sqlalchemy import create_engine
-from sqlalchemy import Column, Integer, String, Float, Datetime
+from sqlalchemy import Column, Integer, String, Float, DateTime
 import pandas as pd
 
 
