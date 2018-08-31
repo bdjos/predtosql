@@ -15,7 +15,7 @@ db_name = 'bjos'
 table_name = 'forecast'
 
 df = predict.predict()
-print(df.columns)
+print(f'the dataframe is: {df}')
 df_dtypes = [DateTime(), 
              Integer(),
              Integer(), 
