@@ -6,7 +6,9 @@ Created on Fri Aug 31 08:41:03 2018
 """
 
 from sqlalchemy import create_engine
+from sqlalchemy import Column, Integer, String, Float, Datetime
 import pandas as pd
+
 
 class pandasdb():
     def __init__(self, database, table):
