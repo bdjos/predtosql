@@ -1,16 +1,19 @@
 # -*- coding: utf-8 -*-
 """
-Created on Wed Aug 22 15:24:19 2018
+Created on Fri Aug 31 08:41:03 2018
 
 @author: BJoseph
 """
-import psycopg2
+
+from sqlalchemy import create_engine
 import pandas as pd
 
 class pandasdb():
     def __init__(self, database, table):
         self.database = database
         self.table = table
+        
+        self.engine = create_engine('postgresql://bjos:3iRM7Ihr@@localhost:5432/bjos')
     
 #    def create_table(self):
 #        connection = psycopg2.connect(host="localhost", database="bjos", user="bjos", password="3iRM7Ihr@")
@@ -28,15 +31,10 @@ class pandasdb():
         else:
             dtypes_dict = dict(zip(list(df.columns), dtypes))
         
-            connection = psycopg2.connect(host="localhost", database="bjos", user="bjos", password="3iRM7Ihr@")
-            df.to_sql(name = self.table, con = connection, if_exists = if_exists, dtype = dtypes_dict)
-            connection.close()
+            df.to_sql(name = self.table, con = self.engine, if_exists = if_exists, dtype = dtypes_dict)
+
         
     def pd_from_db(self):
-        connection = psycopg2.connect(host="localhost", database="bjos", user="bjos", password="3iRM7Ihr@")
-        
-        df = pd.read_sql(f'SELECT * FROM {self.table}', con = connection)
-        connection.close()
+        df = pd.read_sql(f'SELECT * FROM {self.table}', con = self.engine)
         
         return df
-    
