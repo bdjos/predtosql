@@ -24,7 +24,7 @@ df_dtypes = [DateTime(),
              Integer(), 
              Integer(), 
              Integer(), 
-             Float())]
+             Float()]
 
 db = pandasdb.pandasdb(db_name, table_name)
 db.pd_to_db(df_dtypes, df, if_exists='replace')
