@@ -16,14 +16,14 @@ table_name = 'forecast'
 
 df = predict.predict()
 print(f'the dataframe is: {df}')
+print(f'column names are: {df.columns}')
 df_dtypes = [DateTime(), 
-             Integer(),
+             Float(),
+             Float(), 
              Integer(), 
              Integer(), 
              Integer(), 
              Integer(), 
-             Integer(), 
-             Integer(),
              Integer(),
              Float()]
 
