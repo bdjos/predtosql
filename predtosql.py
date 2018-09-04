@@ -23,7 +23,8 @@ df_dtypes = [DateTime(),
              Integer(), 
              Integer(), 
              Integer(), 
-             Integer(), 
+             Integer(),
+             Integer(),
              Float()]
 
 db = pandasdb.pandasdb(db_name, table_name)
