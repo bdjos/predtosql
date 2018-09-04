@@ -15,6 +15,8 @@ db_name = 'bjos'
 table_name = 'forecast2'
 
 df = predict.predict()
+df.columns = ['Rel Hum' if x == 'Rel Hum (%)' else x for x in df.columns]
+
 print(f'the dataframe is: {df}')
 print(f'column names are: {df.columns}')
 df_dtypes = [DateTime(), 
