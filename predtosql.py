@@ -12,7 +12,7 @@ import os
 from sqlalchemy import Column, Integer, String, Float, DateTime
 
 db_name = 'bjos'
-table_name = 'forecast'
+table_name = 'forecast2'
 
 df = predict.predict()
 print(f'the dataframe is: {df}')
@@ -24,6 +24,7 @@ df_dtypes = [DateTime(),
              Integer(), 
              Integer(), 
              Integer(), 
+             Integer(),
              Integer(),
              Float()]
 

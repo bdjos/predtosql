@@ -186,6 +186,7 @@ def predict():
         preds.append(prediction[0][0])
     
     df_forecast['Predicted Demand'] = preds
+    df_forecast = df_forecast.reset_index()
     
 #    df_forecast.to_csv('predictions.csv')
     return df_forecast
